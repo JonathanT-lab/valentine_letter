@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Valentine Letter 💌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      color: #ff1a75;
+      display: flex;
+      justify-content: center;
+    }
+
+    .letter-box {
+      max-width: 600px;
+      background: #ffe6ee;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4d6d;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="letter-box">
+    <h1>💌 My Valentine</h1>
+
+<p>
+      This is a simple web-based letter created as a project demonstration.
+      It represents how a personal message can be shared through a webpage.
+    </p>
+    <p>
+      Valentine’s Day is often about appreciation, kindness, and meaningful connections.
+      This page is designed to reflect those ideas in a minimal and clean format.
+    </p>
+    <p>
+      Thank you for visiting this project.
+    </p>
+    <p><em>— Demo Project</em></p>
+  </div>
+
+  <!-- Background music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Mobile autoplay fix: use YES click interaction as user gesture
+    const audio = document.getElementById('bgMusic');
+    document.body.addEventListener('click', () => {
+      audio.play();
+    }, { once: true });
+  </script>
+
+</body>
+</html>

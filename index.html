@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine 💖</title>
+  <style>
+    body {
+      background: #ffe6ee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .box {
+      background: #ffb6c1;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      width: 600px; /* fixed desktop width */
+      position: relative;
+    }
+
+    .photo {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #yes:hover {
+      transform: scale(1.05);
+    }
+
+    #no {
+      background: #ddd;
+      position: relative;
+    }
+
+    #message {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #ff1a75;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" id="box">
+    <img src="mypic.jpg" alt="My Picture" class="photo">
+
+    <h1>Will you be my Valentine? 💘</h1>
+
+    <button id="yes" onclick="yesClick()">YES</button>
+    <button id="no" onmouseover="moveNo()">NO</button>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    const box = document.getElementById('box');
+    const noBtn = document.getElementById('no');
+
+    function moveNo() {
+      const btnWidth = noBtn.offsetWidth;
+      const btnHeight = noBtn.offsetHeight;
+
+      // Get box dimensions
+      const boxWidth = box.offsetWidth;
+      const boxHeight = box.offsetHeight;
+
+      // Limit NO button inside box
+      const maxX = boxWidth - btnWidth - 10;
+      const maxY = boxHeight - btnHeight - 10;
+
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+
+      noBtn.style.position = "absolute";
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+
+    function yesClick() {
+      document.getElementById("message").innerText = "YAY!! 💖 I knew it！ 😍";
+      setTimeout(() => {
+        window.location.href = "letter.html";
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
