@@ -7,7 +7,7 @@ An interactive Valentine-themed web project built with HTML, CSS, and JavaScript
 This project is a fun, interactive Valentine-themed webpage built with HTML, CSS, and JavaScript.
 
 ## 🌐 Live Demo
-https://JonathanT-lab.github.io/valentine_letter
+https://jonathant-lab.github.io/valentine_letter/
 
 ## ✨ Features
 - Interactive YES / NO buttons
